@@ -13600,12 +13600,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x81077A5bDE198eB72367d6Cf44328fC2d50FdC98",
-      "transactionHash": "0xc660bb1b2ec7c6d67af48a5617c00af0554d8ad3f4dc68b697657cba0fcc12f2"
+      "address": "0x3B6EdD8451f9d1CE0A351e951DBA6a367EeDCA79",
+      "transactionHash": "0xa7d9ff628528429cc05928770672da5b5a261beb57a274ae63930c3998c90844"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-11-11T06:03:33.116Z",
+  "updatedAt": "2024-12-19T12:50:12.850Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

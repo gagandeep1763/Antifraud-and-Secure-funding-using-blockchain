@@ -1,0 +1,197 @@
+
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('pbg.gif') no-repeat center center fixed;
+  background-size: cover;
+  padding: 60px;
+}
+
+.profile-container {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  animation: gradient-border 5s infinite alternate;
+}
+
+
+@keyframes gradient-border {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 
+                0 0 25px rgba(233, 200, 11, 0.6),
+                0 0 35px rgba(11, 133, 233, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(233, 200, 11, 0.8), 
+                0 0 25px rgba(11, 133, 233, 0.6),
+                0 0 35px rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(233, 200, 11, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(11, 133, 233, 0.8), 
+                0 0 25px rgba(255, 255, 255, 0.6),
+                0 0 35px rgba(233, 200, 11, 0.5);
+    border: 2px solid rgba(11, 133, 233, 0.7);
+  }
+}
+
+.profile-container h2 {
+  font-size: 3.0rem;
+  margin-bottom: 60px; 
+  color: #efb105;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.profile-details {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+button {
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 0;
+}
+
+
+.change-password-button {
+  background: linear-gradient(45deg, #0056b3, #140464);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+              0 0 10px rgba(11, 133, 233, 0.7);
+  border: 2px solid rgba(11, 133, 233, 0.6);
+  border-radius: 10px;
+}
+
+.change-password-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #140464, #0056b3);
+  box-shadow: 0 4px 15px rgba(11, 133, 233, 0.8);
+}
+
+
+button[type="submit"] {
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(45deg, #0056b3, #140464);
+  
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+              0 0 10px rgba(11, 133, 233, 0.7);
+  border: 2px solid rgba(11, 133, 233, 0.6);
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(45deg, #140464, #0056b3);
+  box-shadow: 0 4px 15px rgba(11, 133, 233, 0.8);
+}
+
+
+
+
+
+.cancel-button {
+  background: linear-gradient(45deg, #dc3545, #c82333);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+              0 0 10px rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.cancel-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #c82333, #dc3545);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8);
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .profile-container {
+    margin: 20px;
+  }
+}
+
+
+
+button {
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+
+.sign-out-button {
+  background: linear-gradient(45deg, #dc3545, #a11a1f);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+              0 0 10px rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.sign-out-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #a11a1f, #dc3545);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8);
+}
+
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
