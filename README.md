@@ -58,7 +58,7 @@ The platform also includes a login and registration system, allowing users to se
 1. Clone the Repository: 
 git clone https://github.com/gagandeep1763/Antifrauds-and-Secure-Funding-using-Blockchain.git
 
-cd Antifrauds-and-Secure-Funding-using-Blockchain
+cd 
 
 2. Install Backend Dependencies
    
