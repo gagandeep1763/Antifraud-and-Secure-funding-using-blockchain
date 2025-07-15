@@ -99,15 +99,21 @@ npm install
 8. Start the React App
 
 npm start
+
 Visit the application at:
+
 http://localhost:3000
 
 8. Connect MetaMask
 Open MetaMask browser extension.
 
 Add a custom network:
+
 Network Name: Ganache
+
 RPC URL: http://127.0.0.1:7545
+
 Chain ID: 1337 or 5777 (check Ganache interface)
+
 Import one of the Ganache accounts using its private key.
 Refresh the DApp and approve the MetaMask connection popup.
