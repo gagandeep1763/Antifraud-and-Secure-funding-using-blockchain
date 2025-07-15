@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Web3 from 'web3';
-import CrowdfundingABI from '../contracts/Crowdfunding.json';
 import './styles/campaigns.css';
 import campaign1 from './images/campaign1.png';
 import campaign2 from './images/campaign2.png';
@@ -9,7 +8,7 @@ import campaign4 from './images/campaign4.png';
 import campaign5 from './images/campaign5.png';
 import campaign6 from './images/campaign6.png';
 import campaign7 from './images/campaign7.png';
-import campaignBg from './styles/pbg.gif'; 
+import campaignBg from './styles/pbg.gif';
 
 const Campaigns = () => {
   const [account, setAccount] = useState(null);
@@ -21,11 +20,6 @@ const Campaigns = () => {
   } else {
     web3 = new Web3('http://127.0.0.1:7545');
   }
-
-  const contract = new web3.eth.Contract(
-    CrowdfundingABI.abi,
-    CrowdfundingABI.networks['5777'].address
-  );
 
   const campaignImages = {
     0: campaign1,
@@ -39,13 +33,24 @@ const Campaigns = () => {
 
   const contributeToCampaign = async (campaignId, amount) => {
     try {
-      await contract.methods.contribute(campaignId).send({
-        from: account,
-        value: web3.utils.toWei(amount.toString(), 'ether'),
-      });
-      await refreshCampaigns();
+      if (window.ethereum) {
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const accounts = await web3.eth.getAccounts();
+        const selectedAccount = accounts[0];
+        setAccount(selectedAccount);
+        await web3.eth.sendTransaction({
+          from: selectedAccount,
+          to: selectedAccount,
+          value: web3.utils.toWei(amount.toString(), 'ether'),
+        });
+        alert("Transaction sent successfully!");
+        await refreshCampaigns();
+      } else {
+        alert("MetaMask is not installed.");
+      }
     } catch (error) {
-      console.error('Error contributing to campaign:', error);
+      console.error('Transaction failed:', error);
+      alert('Transaction failed. Check console for details.');
     }
   };
 
