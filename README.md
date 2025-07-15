@@ -77,6 +77,7 @@ This simulates a local Ethereum blockchain at http://127.0.0.1:7545.
 5. Deploy Contracts to Ganache
 
 npx truffle migrate --reset
+
 Make sure your truffle-config.js is configured with:
 js
 Copy
@@ -91,6 +92,7 @@ networks: {
 
 6. Set Up the Frontend
 Navigate to the frontend folder (e.g., fraud):
+
 cd fraud
 npm install
 
